@@ -4,7 +4,7 @@ var bodyPraser = require('body-parser');
 var catalogRouter = require('./routes/catalog');
 require('dotenv').config();
 const {sendMessage , getMessageInput} = require('../messageHelper');
-app.use ('catalog', catalogRouter);
+app.use ('./catalog', catalogRouter);
 
 router.use(bodyPraser.json());
 router.post('/', function(req ,res, next){
